@@ -28,8 +28,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        /* Painted texture background */
         background-color: var(--background);
         background-image: url("images/leaf-background-1.jpg");
         background-repeat: repeat;
@@ -76,11 +74,11 @@
         color: var(--sage-green);
         text-align: center;
         margin-bottom: 1.5rem;
-        position: relative;
       }
 
       .time-entry {
         font-size: 1.3rem;
+        font-weight: bold;
         margin: 0.5rem 0;
         text-align: center;
       }
@@ -104,11 +102,17 @@
         max-width: 800px;
         margin: 0 auto 2rem;
         text-align: center;
-        white-space: pre-wrap;
         line-height: 1.7;
+        white-space: pre-line;
+        word-break: keep-all;
+        overflow-wrap: break-word;
       }
 
-      /* Back to top button */
+      .hymn-text p {
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+      }
+
       #backToTop {
         position: fixed;
         bottom: 30px;
@@ -180,17 +184,15 @@
       <div class="time-entry">10:25 AM - Everyone Seated</div>
       <div class="time-entry">10:30 AM - Entrance of the Bride</div>
       <div class="time-entry">
-        10:37 AM - Song:
-        <a href="#song1" class="song-link">"O Glorious Divine Love"</a>
+        10:37 AM - HYMN 1:
+        <a href="#song1" class="song-link">"The Church is Christ's Deep Longing" (#1229)</a>
       </div>
       <div class="time-entry">10:42 AM - Opening Prayer</div>
       <div class="time-entry">10:50 AM - A Word of Encouragement</div>
       <div class="time-entry">11:05 AM - Exchange of Vows & Rings</div>
       <div class="time-entry">
-        11:15 AM - Song:
-        <a href="#song2" class="song-link"
-          >"The Church is Christ's Deep Longing" (#1229)</a
-        >
+        11:15 AM - HYMN 2:
+        <a href="#song2" class="song-link">"O Glorious Divine Love"</a>
       </div>
       <div class="time-entry">11:20 AM - Closing Remarks</div>
       <div class="time-entry">12:00 PM - Love Feast (Lunch)</div>
@@ -199,80 +201,80 @@
     <div class="section hymn">
       <h2>Wedding Hymns</h2>
 
-      <a id="song1" class="song-link">O Glorious Divine</a>
+      <a id="song1" class="song-link">The Church is Christ's Deep Longing (Hymn #1229)</a>
       <div class="hymn-text">
-        Since long before the world began,
-        In Your heart You longed for a Bride;
-        This mutual dwelling, Your glorious plan;
-        With me e'er to abide.
-        Not knowing Your heart,
-        I sinned and thus should die;
-        Yet You shed Your blood to set me free.
-        You gave me Your life, to me drew nigh;
-        Wondrous love! We two one forever will be.
+        <p>The church is Christ's deep longing<br>
+        And His good pleasure too.<br>
+        His every word and action<br>
+        Is made with her in view.<br>
+        His heart's love is established,<br>
+        And nought can Him deter;<br>
+        Before the earth's foundation<br>
+        His thoughts were filled with her.</p>
 
-        O glorious divine love! How can I fathom,
-        Higher than the sky, deeper than the sea;
-        It crushes death's pow'r and Satan's kingdom;
-        Nothing can compare with Your love to me;
-        So fervid and so deep, so gentle and so true;
-        I'm in love, Lord, with You.
-        I give you my heart, my life and my soul,
-        Come suffering or joy whatever betide.
-        By Your boundless grace,
-        I'll lay down my all
-        To build up Your church,
-        Your glorious Bride;
-        Your heart to satisfy, mutual abode we'll be
-        in eternity.
+        <p>The eve of all creation<br>
+        He mused on His delight,<br>
+        And pondered every feature,<br>
+        Well-pleasing in His sight.<br>
+        Creation sprang to being,<br>
+        But deep in Him did hide<br>
+        A heart of depth unfathomed<br>
+        Fixed on a glorious Bride.</p>
+
+        <p>And thus His will was 'stablished<br>
+        His counterpart to gain;<br>
+        This blessed, firm intention,<br>
+        Eternally the same,<br>
+        Though sin should e'en beguile man,<br>
+        Then mock his helpless state,<br>
+        He never could forsake her,<br>
+        His yearning ne'er abate.</p>
+
+        <p>Then mercy richly flourished,<br>
+        And love was, oh, so vast,<br>
+        As graciously He sought her<br>
+        With wisdom unsurpassed.<br>
+        The love He gave to win her<br>
+        God only comprehends!<br>
+        His life laid down, an offering<br>
+        Whose fragrance yet ascends.</p>
+
+        <p>And now in resurrection<br>
+        To her He draws most near,<br>
+        And with untold affection<br>
+        In glory does appear.<br>
+        As she beholds her Bridegroom,<br>
+        His glory floods her heart,<br>
+        'Til she, His Bride, is raptured,<br>
+        His longed-for counterpart.</p>
       </div>
 
-      <a id="song2" class="song-link">The Church is Christ's Deep Longing (Hymn #1229)</a>
+      <a id="song2" class="song-link">O Glorious Divine</a>
       <div class="hymn-text">
-        The church is Christ's deep longing
-        And His good pleasure too.
-        His every word and action
-        Is made with her in view.
-        His heart's love is established,
-        And nought can Him deter;
-        Before the earth's foundation
-        His thoughts were filled with her.
+        <p>Since long before the world began,<br>
+        In Your heart You longed for a Bride;<br>
+        This mutual dwelling, Your glorious plan;<br>
+        With me e'er to abide.<br>
+        Not knowing Your heart,<br>
+        I sinned and thus should die;<br>
+        Yet You shed Your blood to set me free.<br>
+        You gave me Your life, to me drew nigh;<br>
+        Wondrous love! We two one forever will be.</p>
 
-        The eve of all creation
-        He mused on His delight,
-        And pondered every feature,
-        Well-pleasing in His sight.
-        Creation sprang to being,
-        But deep in Him did hide
-        A heart of depth unfathomed
-        Fixed on a glorious Bride.
-
-        And thus His will was 'stablished
-        His counterpart to gain;
-        This blessed, firm intention,
-        Eternally the same,
-        Though sin should e'en beguile man,
-        Then mock his helpless state,
-        He never could forsake her,
-        His yearning ne'er abate.
-
-        Then mercy richly flourished,
-        And love was, oh, so vast,
-        As graciously He sought her
-        With wisdom unsurpassed.
-        The love He gave to win her
-        God only comprehends!
-        His life laid down, an offering
-        Whose fragrance yet ascends.
-
-        And now in resurrection
-        To her He draws most near,
-        And with untold affection
-        In glory does appear.
-        As she beholds her Bridegroom,
-        His glory floods her heart,
-        'Til she, His Bride, is raptured,
-        His longed-for counterpart.
+        <p>O glorious divine love! How can I fathom,<br>
+        Higher than the sky, deeper than the sea;<br>
+        It crushes death's pow'r and Satan's kingdom;<br>
+        Nothing can compare with Your love to me;<br>
+        So fervid and so deep, so gentle and so true;<br>
+        I'm in love, Lord, with You.<br>
+        I give you my heart, my life and my soul,<br>
+        Come suffering or joy whatever betide.<br>
+        By Your boundless grace,<br>
+        I'll lay down my all<br>
+        To build up Your church,<br>
+        Your glorious Bride;<br>
+        Your heart to satisfy, mutual abode we'll be<br>
+        in eternity.</p>
       </div>
     </div>
 
