@@ -1,285 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding Schedule & Hymns</title>
-  <style>
-    :root {
-      --white: #ffffff;
-      --sage-green: #9caf88;
-      --dusty-rose: #d8a7a7;
-      --glass-bg: rgba(255, 255, 255, 0.85);
-      --glass-border: #9caf88;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 2rem 1rem;
-      background-color: var(--white);
-      color: #111;
-      line-height: 1.75;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background: var(--glass-bg);
-      border-radius: 16px;
-      border: 2px solid var(--sage-green);
-      color: #111;
-      padding: 2rem;
-      text-align: center;
-      max-width: 900px;
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      color: var(--sage-green);
-    }
-
-    .section {
-      background: var(--glass-bg);
-      border: 2px solid var(--sage-green);
-      border-radius: 16px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      max-width: 900px;
-      width: 100%;
-      color: #111;
-    }
-
-    .section h2 {
-      font-size: 2.2rem;
-      margin-top: 0;
-      text-align: center;
-      color: var(--sage-green);
-    }
-
-    .time-entry {
-      font-size: 1.6rem;
-      margin: 1rem 0;
-      text-align: center;
-    }
-
-    a.song-link {
-      font-weight: bold;
-      color: var(--dusty-rose);
-      font-size: 1.9rem;
-      margin: 2rem 0 1rem;
-      text-align: center;
-      display: block;
-      text-decoration: none;
-      cursor: pointer;
-      transition: color 0.3s ease;
-    }
-    a.song-link:hover,
-    a.song-link:focus {
-      color: var(--sage-green);
-      outline: none;
-    }
-
-    .wedding-verse {
-      font-size: 1.1rem;
-      margin: 1.5rem auto 2rem; 
-      max-width: 800px;
-      color: #333;
-      white-space: pre-wrap;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    .hymn-text {
-      font-size: 1.5rem;
-      margin: 0 auto 2rem;
-      max-width: 800px;
-      color: #333;
-      white-space: pre-wrap;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    /* Back to top button */
-    #backToTop {
-      position: fixed;
-      bottom: 40px;
-      right: 40px;
-      background: var(--sage-green);
-      color: var(--white);
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-      z-index: 1000;
-    }
-
-    #backToTop:hover {
-      background: var(--dusty-rose);
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Schedule & Hymns</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --sage-green: #6d8a63;
+        --rosewood: #8c3b3b;
+        --background: #f9f7f3;
+        --text-color: #2d2d2d;
       }
-      .time-entry, a.song-link, .hymn-text {
-        font-size: 1.2rem;
-      }
-      #backToTop {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        bottom: 20px;
-        right: 20px;
-      }
-    }
 
-    @media print {
+      * {
+        box-sizing: border-box;
+      }
+
       body {
-        background: none;
+        font-family: "Lora", serif;
+        color: var(--text-color);
+        margin: 0;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* Painted texture background */
+        background-color: var(--background);
+        background-image: url("images/leaf-background-1.jpg");
+        background-repeat: repeat;
+        background-size: contain;
+        background-blend-mode: multiply;
       }
-      header, .section {
-        background: none;
-        border: none;
+
+      header,
+      .section {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 12px;
+        padding: 2rem;
+        max-width: 900px;
+        width: 100%;
+        position: relative;
+        border: 1px solid var(--sage-green);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%236d8a63" viewBox="0 0 100 100"><path d="M10,10 C20,30 40,10 50,30 C60,50 80,20 90,40" stroke="%236d8a63" fill="none" stroke-width="2"/></svg>');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 150px;
       }
+
+      header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        color: var(--sage-green);
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+
+      .wedding-verse {
+        font-style: italic;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #444;
+        margin-top: 1rem;
+      }
+
+      .section h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        color: var(--sage-green);
+        text-align: center;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+
+      .time-entry {
+        font-size: 1.3rem;
+        margin: 0.5rem 0;
+        text-align: center;
+      }
+
+      a.song-link {
+        font-weight: bold;
+        color: var(--rosewood);
+        font-size: 1.4rem;
+        display: block;
+        text-align: center;
+        margin: 1.5rem 0 0.5rem;
+        text-decoration: none;
+      }
+
+      a.song-link:hover {
+        color: var(--sage-green);
+      }
+
+      .hymn-text {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        text-align: center;
+        white-space: pre-wrap;
+        line-height: 1.7;
+      }
+
+      /* Back to top button */
       #backToTop {
-        display: none !important;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--sage-green);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
-    }
-  </style>
-</head>
-<body>
-  <header id="top">
-    <h1>Wedding Schedule & Hymns</h1>
-    <div class="wedding-verse">Colossians 3:14 - "And over all there things put on love, which is the uniting bond of perfectness."</div>
-  </header>
 
-  <div class="section schedule">
-    <h2>Wedding Schedule</h2>
-    <div class="time-entry">10:00 AM - Guest Arrival</div>
-    <div class="time-entry">10:25 AM - Everyone Seated</div>
-    <div class="time-entry">10:30 AM - Entrance of the Bride</div>
-    <div class="time-entry">10:37 AM - Song: <a href="#song1" class="song-link">"O Glorious Divine Love"</a></div>
-    <div class="time-entry">10:42 AM - Opening Prayer</div>
-    <div class="time-entry">10:50 AM - A Word of Encouragement</div>
-    <div class="time-entry">11:05 AM - Exchange of Vows & Rings</div>
-    <div class="time-entry">11:15 AM - Song: <a href="#song2" class="song-link">"The Church is Christ's Deep Longing" (#1229)</a></div>
-    <div class="time-entry">11:20 AM - Closing Remarks</div>
-    <div class="time-entry">12:00 PM - Love Feast (Lunch)</div>
-  </div>
+      #backToTop:hover {
+        background: var(--rosewood);
+      }
 
-  <div class="section hymn">
-    <h2>Wedding Hymns</h2>
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 2rem;
+        }
 
-    <a id="song1" class="song-link">O Glorious Divine</a>
-    <div class="hymn-text">
-Since long before the world began,
-In Your heart You longed for a Bride;
-This mutual dwelling, Your glorious plan;
-With me e'er to abide.
-Not knowing Your heart,
-I sinned and thus should die;
-Yet You shed Your blood to set me free.
-You gave me Your life, to me drew nigh;
-Wondrous love! We two one forever will be.
+        .section h2 {
+          font-size: 1.8rem;
+        }
 
-O glorious divine love! How can I fathom,
-Higher than the sky, deeper than the sea;
-It crushes death's pow'r and Satan's kingdom;
-Nothing can compare with Your love to me;
-So fervid and so deep, so gentle and so true;
-I'm in love, Lord, with You.
-I give you my heart, my life and my soul,
-Come suffering or joy whatever betide.
-By Your boundless grace,
-I'll lay down my all
-To build up Your church,
-Your glorious Bride;
-Your heart to satisfy, mutual abode we'll be
-in eternity.
+        .time-entry,
+        .hymn-text,
+        a.song-link {
+          font-size: 1em;
+        }
+      }
+
+      @media print {
+        body {
+          background: none;
+        }
+
+        header,
+        .section {
+          background: none;
+          border: none;
+          box-shadow: none;
+        }
+
+        #backToTop {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Wedding Schedule & Hymns</h1>
+      <div class="wedding-verse">
+        “And over all these things put on love, which is the uniting bond of
+        perfectness.”<br />Col. 3:14
+      </div>
+    </header>
+
+    <div class="section schedule">
+      <h2>Wedding Schedule</h2>
+      <div class="time-entry">10:00 AM - Guest Arrival</div>
+      <div class="time-entry">10:25 AM - Everyone Seated</div>
+      <div class="time-entry">10:30 AM - Entrance of the Bride</div>
+      <div class="time-entry">
+        10:37 AM - Song:
+        <a href="#song1" class="song-link">"O Glorious Divine Love"</a>
+      </div>
+      <div class="time-entry">10:42 AM - Opening Prayer</div>
+      <div class="time-entry">10:50 AM - A Word of Encouragement</div>
+      <div class="time-entry">11:05 AM - Exchange of Vows & Rings</div>
+      <div class="time-entry">
+        11:15 AM - Song:
+        <a href="#song2" class="song-link"
+          >"The Church is Christ's Deep Longing" (#1229)</a
+        >
+      </div>
+      <div class="time-entry">11:20 AM - Closing Remarks</div>
+      <div class="time-entry">12:00 PM - Love Feast (Lunch)</div>
     </div>
 
-    <a id="song2" class="song-link">The Church is Christ's Deep Longing (Hymn #1229)</a>
-    <div class="hymn-text">
-The church is Christ's deep longing
-And His good pleasure too.
-His every word and action
-Is made with her in view.
-His heart's love is established,
-And nought can Him deter;
-Before the earth's foundation
-His thoughts were filled with her.
+    <div class="section hymn">
+      <h2>Wedding Hymns</h2>
 
-The eve of all creation
-He mused on His delight,
-And pondered every feature,
-Well-pleasing in His sight.
-Creation sprang to being,
-But deep in Him did hide
-A heart of depth unfathomed
-Fixed on a glorious Bride.
+      <a id="song1" class="song-link">O Glorious Divine</a>
+      <div class="hymn-text">
+        Since long before the world began,
+        In Your heart You longed for a Bride;
+        This mutual dwelling, Your glorious plan;
+        With me e'er to abide.
+        Not knowing Your heart,
+        I sinned and thus should die;
+        Yet You shed Your blood to set me free.
+        You gave me Your life, to me drew nigh;
+        Wondrous love! We two one forever will be.
 
-And thus His will was 'stablished
-His counterpart to gain;
-This blessed, firm intention,
-Eternally the same,
-Though sin should e'en beguile man,
-Then mock his helpless state,
-He never could forsake her,
-His yearning ne'er abate.
+        O glorious divine love! How can I fathom,
+        Higher than the sky, deeper than the sea;
+        It crushes death's pow'r and Satan's kingdom;
+        Nothing can compare with Your love to me;
+        So fervid and so deep, so gentle and so true;
+        I'm in love, Lord, with You.
+        I give you my heart, my life and my soul,
+        Come suffering or joy whatever betide.
+        By Your boundless grace,
+        I'll lay down my all
+        To build up Your church,
+        Your glorious Bride;
+        Your heart to satisfy, mutual abode we'll be
+        in eternity.
+      </div>
 
-Then mercy richly flourished,
-And love was, oh, so vast,
-As graciously He sought her
-With wisdom unsurpassed.
-The love He gave to win her
-God only comprehends!
-His life laid down, an offering
-Whose fragrance yet ascends.
+      <a id="song2" class="song-link">The Church is Christ's Deep Longing (Hymn #1229)</a>
+      <div class="hymn-text">
+        The church is Christ's deep longing
+        And His good pleasure too.
+        His every word and action
+        Is made with her in view.
+        His heart's love is established,
+        And nought can Him deter;
+        Before the earth's foundation
+        His thoughts were filled with her.
 
-And now in resurrection
-To her He draws most near,
-And with untold affection
-In glory does appear.
-As she beholds her Bridegroom,
-His glory floods her heart,
-'Til she, His Bride, is raptured,
-His longed-for counterpart.
+        The eve of all creation
+        He mused on His delight,
+        And pondered every feature,
+        Well-pleasing in His sight.
+        Creation sprang to being,
+        But deep in Him did hide
+        A heart of depth unfathomed
+        Fixed on a glorious Bride.
+
+        And thus His will was 'stablished
+        His counterpart to gain;
+        This blessed, firm intention,
+        Eternally the same,
+        Though sin should e'en beguile man,
+        Then mock his helpless state,
+        He never could forsake her,
+        His yearning ne'er abate.
+
+        Then mercy richly flourished,
+        And love was, oh, so vast,
+        As graciously He sought her
+        With wisdom unsurpassed.
+        The love He gave to win her
+        God only comprehends!
+        His life laid down, an offering
+        Whose fragrance yet ascends.
+
+        And now in resurrection
+        To her He draws most near,
+        And with untold affection
+        In glory does appear.
+        As she beholds her Bridegroom,
+        His glory floods her heart,
+        'Til she, His Bride, is raptured,
+        His longed-for counterpart.
+      </div>
     </div>
-  </div>
 
-  <button id="backToTop" aria-label="Back to top">&#8679;</button>
+    <button id="backToTop" aria-label="Back to top">&#8679;</button>
 
-  <script>
-    const backToTopButton = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'flex';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    });
-
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-</body>
+    <script>
+      const backToTopButton = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        backToTopButton.style.display = window.scrollY > 300 ? "flex" : "none";
+      });
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
 </html>
