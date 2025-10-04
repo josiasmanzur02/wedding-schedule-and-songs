@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: var(--sage-green);
+}
+
 body {
     font-family: "Lora", serif;
     color: var(--text-color);
