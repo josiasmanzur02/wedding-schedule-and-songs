@@ -17,13 +17,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--sage-green);
+    background-color: var(--background);
     background-image: url("images/leaf-background-1.jpg");
     background-repeat: repeat;
     background-size: contain;
     background-blend-mode: multiply;
 }
 
+/* Fill iOS Safari safe area excess space with theme color */
 body::before,
 body::after {
     content: "";
