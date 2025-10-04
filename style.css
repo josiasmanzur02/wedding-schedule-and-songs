@@ -28,26 +28,6 @@ body {
     background-blend-mode: multiply;
 }
 
-/* Fill iOS Safari safe area excess space with theme color */
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    background: var(--sage-green);
-    z-index: -1;
-    pointer-events: none;
-}
-body::before {
-    top: 0;
-    height: env(safe-area-inset-top);
-}
-body::after {
-    bottom: 0;
-    height: env(safe-area-inset-bottom);
-}
-
 header,
 .section {
     background-color: rgba(255, 255, 255, 0.8);
