@@ -14,14 +14,13 @@ html {
 }
 
 body {
-    font-family: "Lora", serif;
+    font-family: "Lora", serif; 
     color: var(--text-color);
     margin: 0;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--sage-green);
     background-image: url("images/leaf-background-1.jpg");
     background-repeat: repeat;
     background-size: contain;
